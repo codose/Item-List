@@ -44,7 +44,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.CustomViewHold
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, CheckoutActivity.class);
+                Intent intent = new Intent(context, itemActivity.class);
                 intent.putExtra("itemPrice", itemPrice.get(position))
                         .putExtra("itemName", itemNames.get(position))
                         .putExtra("itemPic", itemImage.get(position));
