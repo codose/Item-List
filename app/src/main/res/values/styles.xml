@@ -6,6 +6,13 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="OTPButtonStyle">@style/otpBtnStyle</item>
+        <item name="PayButtonStyle">@style/payBtnStyle</item>
+        <item name="PinButtonStyle">@style/pinButtonStyle</item>
+        <item name="OTPHeaderStyle">@style/otpHeaderStyle</item>
+        <item name="TabLayoutStyle">@style/tabLayoutStyle</item>
+        <item name="PinHeaderStyle">@style/pinHeaderStyle</item>
+        <item name="SavedCardButtonStyle">@style/svdCardsBtnStyle</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -16,5 +23,41 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="tabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="tabLayoutStyle2" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/primaryColor</item>
+    </style>
+
+    <style name="otpHeaderStyle">
+        <item name="android:background">@color/primaryColor</item>
+    </style>
+
+    <style name="pinHeaderStyle">
+        <item name="android:background">@color/primaryColor</item>
+    </style>
+
+    <style name="otpBtnStyle" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="pinButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/primaryColor</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="svdCardsBtnStyle" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/primaryColor</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="payBtnStyle" parent="@android:style/Widget.Button">
+        <item name="android:background">@color/primaryColor</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
 
 </resources>

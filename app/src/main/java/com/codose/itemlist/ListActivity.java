@@ -11,9 +11,9 @@ import java.util.Arrays;
 
 public class ListActivity extends AppCompatActivity {
 
-    ArrayList<String> itemNames = new ArrayList<>(Arrays.asList("Puff Puff", "Egg Roll", "Chin Chin", "Fish Roll","Small Chops", "Cookies","Bread","Pizza"));
-    ArrayList<String> itemPrice = new ArrayList<>(Arrays.asList("50","150","200","150","550","450","350","2500"));
-    ArrayList<Integer> itemImage = new ArrayList<>(Arrays.asList(R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image,R.drawable.image));
+    ArrayList<String> itemNames = new ArrayList<>(Arrays.asList("Samsung Galaxy A10", "Samsung Galaxy A20", "iPhone X", "Samsung Galaxy S10","Samsung Galaxy Note 10", "iPhone XS","iPhone XS Max","Samsung Galaxy A80"));
+    ArrayList<String> itemPrice = new ArrayList<>(Arrays.asList("45000","54000","350000","480000","520000","520000","540000","120000"));
+    ArrayList<Integer> itemImage = new ArrayList<>(Arrays.asList(R.drawable.a10,R.drawable.a20,R.drawable.iphonex,R.drawable.s10,R.drawable.note10,R.drawable.iphonexs,R.drawable.iphonexsm,R.drawable.a80));
 
 
     @Override

@@ -74,7 +74,8 @@
                         android:layout_marginStart="4dp"
                         android:text="@string/textview"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="18sp"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@+id/naira"
                         app:layout_constraintTop_toTopOf="@+id/naira"
                         tools:layout_conversion_absoluteHeight="19dp"
@@ -82,13 +83,13 @@
 
                     <ImageView
                         android:id="@+id/productPic"
-                        android:layout_width="122dp"
-                        android:layout_height="115dp"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginTop="32dp"
-                        android:layout_marginBottom="32dp"
+                        android:layout_width="0dp"
+                        android:layout_height="318dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="16dp"
                         android:contentDescription="@string/item_image"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/image"
@@ -99,24 +100,28 @@
                         android:id="@+id/productName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
                         android:text="@string/textview"
                         android:textColor="@color/colorPrimary"
                         android:textSize="28sp"
-                        app:layout_constraintStart_toStartOf="@+id/naira"
-                        app:layout_constraintTop_toTopOf="@+id/productPic" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/productPic" />
 
                     <TextView
                         android:id="@+id/naira"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
                         android:text="@string/naira"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="18sp"
-                        app:layout_constraintBottom_toBottomOf="@+id/productPic"
-                        app:layout_constraintStart_toEndOf="@+id/productPic"
-                        app:layout_constraintTop_toBottomOf="@+id/productName" />
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/divider2"
+                        app:layout_constraintStart_toStartOf="@+id/divider2"
+                        app:layout_constraintTop_toBottomOf="@+id/divide" />
 
                     <View
                         android:id="@+id/divider2"
@@ -126,6 +131,16 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
+
+                    <View
+                        android:id="@+id/divide"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/productName" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>

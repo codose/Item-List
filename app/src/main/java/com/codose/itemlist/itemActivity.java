@@ -3,6 +3,8 @@ package com.codose.itemlist;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.flutterwave.raveandroid.RaveConstants;
+import com.flutterwave.raveandroid.RavePayActivity;
 import com.flutterwave.raveandroid.RavePayManager;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -13,6 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class itemActivity extends AppCompatActivity {
 
@@ -69,6 +72,18 @@ public class itemActivity extends AppCompatActivity {
                         .initialize();
             }
         });
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == RaveConstants.RAVE_REQUEST_CODE && data != null) {
+            if (resultCode == RavePayActivity.RESULT_SUCCESS) {
+                Toast.makeText(this, "Payment Successfully made ", Toast.LENGTH_LONG).show();
+            } else if (resultCode == RavePayActivity.RESULT_ERROR) {
+                Toast.makeText(this, "Transaction Error ", Toast.LENGTH_LONG).show();
+            } else if (resultCode == RavePayActivity.RESULT_CANCELLED) {
+                Toast.makeText(this, "Transaction Cancelled ", Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
 }
